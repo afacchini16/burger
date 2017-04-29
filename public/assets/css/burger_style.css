@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(255,204,100)
+}
+button {
+    margin: 0 auto;
+    width: 33%;
+    margin-left: 125px;
+}
+h1 {
+    text-align:center;
+}
+.inputArea{
+    margin: 0 auto;
+    width: 33%;
+};

@@ -1,0 +1,24 @@
+  <h1> Burger Time!</h1>
+        <center><img src = "http://icons.iconarchive.com/icons/pixelkit/tasty-bites/256/hamburger-icon.png"></center>
+    
+        <div class = "listContent">
+        <ol>
+            {{#each burger}}
+            {{#unless this.devour}}
+            <li> {{this.burger_name}}
+                <form action = "/{{this.id}}?_method=PUT" method = "POST">
+                <input type = "hidden" name = "devoured" value = "true">
+                <button type = "submit"> Devour It! </button>
+                </form>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ol>
+        </div>
+
+        <div class = "inputArea">
+            <form action = "/" method = "POST"> 
+			<textarea rows = "4" cols = "50" id = "input1" name = "name" type = "text"></textarea><br>
+			<button type = "submit" class = "btn btn-primary">Submit</button>
+            </form>
+		</div>
